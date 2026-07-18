@@ -169,6 +169,82 @@ Through this assignment, I practiced:
 
 ---
 
+## AI vs Me
+
+For this stage, I asked an AI assistant to build the same CRUD API and compared the generated solution with my manually implemented version.
+
+### Prompt Used
+
+Build a Task Management REST API using Python FastAPI.
+Requirements:
+1. Use FastAPI framework.
+2. Store tasks in an in-memory Python list only (no database).
+3. Create these endpoints:
+GET /
+Return:
+{
+"name": "Task API",
+"version": "1.0",
+"endpoints": ["/tasks"]
+}
+GET /health
+Return:
+{
+"status": "ok"
+}
+GET /tasks
+Return all tasks.
+GET /tasks/{id}
+Return a single task.
+If task does not exist return:
+404 status code with JSON error message.
+POST /tasks
+Accept JSON:
+{
+"title": "task name"
+}
+Create a new task:
+- Generate ID automatically
+- Set done=false
+- Return status code 201
+Validate:
+- Missing title should return 400
+- Empty title should return 400
+PUT /tasks/{id}
+Update title and/or done status.
+Invalid data returns 400.
+Unknown ID returns 404.
+DELETE /tasks/{id}
+Delete a task.
+Return status code 204.
+Unknown ID returns 404.
+Add Swagger documentation.
+Create complete main.py code.
+
+### What AI Did Better
+
+- Generated code quickly.
+- Added structured API documentation.
+- Suggested cleaner approaches.
+
+### What AI Got Wrong / Missed
+
+- Some generated implementations may not exactly follow required status codes.
+- Validation rules needed verification.
+- Some decisions were made without being explicitly requested.
+
+### What My Prompt Forgot
+
+The AI highlighted that some details must be specified clearly, such as:
+
+- Exact response formats.
+- Error message format.
+- Status code requirements.
+
+### Final Reflection
+
+Building the API manually first helped me understand and review AI-generated code instead of blindly accepting it.
+
 ## Internship Context
 
 This project was completed as part of:
