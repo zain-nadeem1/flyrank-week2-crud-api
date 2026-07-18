@@ -45,7 +45,7 @@ The data is stored using an in-memory list (no database), as required by the ass
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/zain-nadeem1/flyrank-week2-crud-api
 ```
 
 Move into the project folder:
